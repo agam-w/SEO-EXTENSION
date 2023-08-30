@@ -1,6 +1,9 @@
 export type PageData = {
+  url?: string;
   title?: string;
   description?: string;
+  socialMetaTags?: Record<string, string>;
+  keywords?: string;
 };
 
 export const getPageData = (): PageData => {
