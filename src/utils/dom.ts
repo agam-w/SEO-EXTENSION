@@ -1,3 +1,19 @@
+type Header = {
+  level: number;
+  text: string | null;
+};
+
+type Link = {
+  href?: string | null;
+  label: string | null;
+  rel?: string | null;
+};
+
+type Image = {
+  src: string | null;
+  alt: string | null;
+};
+
 export type PageData = {
   url?: string;
   title?: string;
@@ -7,6 +23,9 @@ export type PageData = {
   robots?: string;
   author?: string;
   lang?: string;
+  headers?: Header[];
+  links?: Link[];
+  images?: Image[];
 };
 
 export const getPageData = (): PageData => {
