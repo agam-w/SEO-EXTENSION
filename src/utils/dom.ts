@@ -4,6 +4,9 @@ export type PageData = {
   description?: string;
   socialMetaTags?: Record<string, string>;
   keywords?: string;
+  robots?: string;
+  author?: string;
+  lang?: string;
 };
 
 export const getPageData = (): PageData => {
